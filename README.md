@@ -10,7 +10,7 @@ This script has been seperated to 4 scripts for people who only needs one functi
 rmdup.py
 ====
 
-Deletes all duplicate files!
+Deletes all duplicate files.
 
 witches:
 -h, -H, -help: Prints the help message
@@ -51,7 +51,7 @@ ordimg.py [path to dir] [switches]
 imgo.py
 ====
 
-imgo - Image Organizer
+imgo (Image Organizer)
 Runs rmdup.py, exfix.py and ordimg.py.
 
 Switches:
