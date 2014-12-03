@@ -3,7 +3,6 @@ imgo
 
 Image Organizer (removes duplicates, fixes extensions and sorts to directories by dimension)
 
-
 This script has been seperated to 4 scripts for people who only needs one functionality.
 
 
@@ -15,9 +14,9 @@ Deletes all duplicate files.
 Switches:
 
 + -h, -H, -help: Prints the help message
-+ -r, -R: Removes dupes from subdirectories too with recursion
++ -r, -R: Removes duplicates from subdirectories too
 + -w, -W: Prints the files which are being removed
-+ -f, -F: Only deletes files which has image extensions
++ -f, -F: Only deletes files with image extensions
 
 
 Usage:
