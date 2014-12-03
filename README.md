@@ -39,7 +39,7 @@ extfix.py [path to dir] [switches]
 ordimg.py
 ====
 
-Moves images to folders by their dimensions
+Moves images to folders by their dimensions. The directories will be generated to the given path (first argument).
 
 Switches:
 + -h, -H, -help: Prints help message
