@@ -3,7 +3,7 @@ imgo
 
 Image Organizer (removes duplicates, fixes extensions and sorts to directories by dimension)
 
-This script has been seperated to 4 scripts for people who only needs one functionality. The software uses Pillow which is the fork of the Python Imaging Library (PIL).
+This script has been seperated to 4 scripts for people who only needs one functionality. This software uses Pillow which is the fork of the Python Imaging Library (PIL).
 
 
 rmdup.py
