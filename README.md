@@ -52,7 +52,7 @@ imgo.py
 ====
 
 imgo (Image Organizer)
-Runs rmdup.py, exfix.py and ordimg.py.
+runs rmdup.py, exfix.py and ordimg.py.
 
 Switches:
 -h, -H, -help: Prints help message
