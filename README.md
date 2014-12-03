@@ -12,11 +12,16 @@ rmdup.py
 
 Deletes all duplicate files.
 
-witches:
+Switches:
+
 -h, -H, -help: Prints the help message
+
 -r, -R: Removes dupes from subdirectories too with recursion
+
 -w, -W: Prints the files which are being removed
+
 -f, -F: Only deletes files which has image extensions
+
 
 Usage:
 rmdup.py [path to dir] [switches]
@@ -28,7 +33,9 @@ extfix.py
 Fixes extension for badly named images.
 
 Switches:
+
 -h, -H, -help: Prints help message
+
 -r, -R: Operates on subdirectories too
 
 Usage:
@@ -41,7 +48,9 @@ ordimg.py
 Moves images to folders by their dimensions
 
 Switches:
+
 -h, -H, -help: Prints help message
+
 -r, -R: Operates on subdirectories too
 
 Usage:
@@ -55,7 +64,9 @@ imgo (Image Organizer)
 runs rmdup.py, exfix.py and ordimg.py.
 
 Switches:
+
 -h, -H, -help: Prints help message
+
 -r, -R: Operates on subdirectories too
 
 Usage:
