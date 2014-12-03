@@ -14,13 +14,10 @@ Deletes all duplicate files.
 
 Switches:
 
--h, -H, -help: Prints the help message
-
--r, -R: Removes dupes from subdirectories too with recursion
-
--w, -W: Prints the files which are being removed
-
--f, -F: Only deletes files which has image extensions
++ -h, -H, -help: Prints the help message
++ -r, -R: Removes dupes from subdirectories too with recursion
++ -w, -W: Prints the files which are being removed
++ -f, -F: Only deletes files which has image extensions
 
 
 Usage:
@@ -33,10 +30,8 @@ extfix.py
 Fixes extension for badly named images.
 
 Switches:
-
--h, -H, -help: Prints help message
-
--r, -R: Operates on subdirectories too
++ -h, -H, -help: Prints help message
++ -r, -R: Operates on subdirectories too
 
 Usage:
 extfix.py [path to dir] [switches]
@@ -48,10 +43,8 @@ ordimg.py
 Moves images to folders by their dimensions
 
 Switches:
-
--h, -H, -help: Prints help message
-
--r, -R: Operates on subdirectories too
++ -h, -H, -help: Prints help message
++ -r, -R: Operates on subdirectories too
 
 Usage:
 ordimg.py [path to dir] [switches]
@@ -64,10 +57,8 @@ imgo (Image Organizer)
 runs rmdup.py, exfix.py and ordimg.py.
 
 Switches:
-
--h, -H, -help: Prints help message
-
--r, -R: Operates on subdirectories too
++ -h, -H, -help: Prints help message
++ -r, -R: Operates on subdirectories too
 
 Usage:
 imgo.py [path to dir] [switches]
