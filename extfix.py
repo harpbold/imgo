@@ -1,10 +1,17 @@
 #!/usr/bin/env python
 
+"""Extension Fixer
+
+Fixes extension for badly named images."""
+
+
 import os
 from PIL import Image
 from sys import argv, exit
 
+
 recursive = False
+
 
 def help():
 	print "Fixes extension for badly named images."
@@ -13,6 +20,7 @@ def help():
 	print " -h, -H, -help: Prints help message"
 	print " -r, -R: \tOperate on subdirectories too"
 	exit(0)
+
 
 def extensionFix(dir):
 	for filename in os.listdir(dir):
@@ -37,14 +45,10 @@ def extensionFix(dir):
 						os.rename(act, os.path.splitext(act)[0] + ".gif")
 			except IOError: # for files which only has an image ext but no image data
 				pass
-					
-if __name__ == "__main__":
-	if len(argv) == 1:
-		print "You must provide a path!"
-		exit(-1)
-		
-	path = argv[1]
-	
+
+
+def init(path):
+	global recursive
 	if not os.path.exists(path):
 		if path == '-h' or path == '-H' or path == '-help':
 			help()
@@ -52,5 +56,27 @@ if __name__ == "__main__":
 			print "The " + os.path.abspath(path) + " does not exists!"
 			print "Aborting script!"
 			exit(-1)
-	
-	extensionFix(argv[1])
+			
+		for x in argv[2:]:
+			if x in ('-h', '-H', '-help'):
+				help()
+				exit(0)
+			elif x in ('-r', '-R'):
+				recursive = True
+			else:
+				print "Unknonw switch, aborting script!"
+				exit(-1)
+
+
+def main():
+	if len(argv) == 1:
+		print "You must provide a path!"
+		exit(-1)
+		
+	path = argv[1]
+	init(path)
+	extensionFix(path)
+
+
+if __name__ == "__main__":
+	main()

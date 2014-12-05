@@ -1,11 +1,19 @@
 #!/usr/bin/env python
 
+"""Image Organizer
+
+Deletes all duplicate files
+Fixes the extension of images
+Sorts images to folders by dimension
+"""
+
+
 from sys import argv, exit
 import os
-
 import rmdup
 import extfix
 import ordimg
+
 
 def help():
 	print "imgo - Image Organizer"
@@ -17,7 +25,8 @@ def help():
 	print "  -h, -H, -help: Prints the help message"
 	print "  -r, -R:\t Operate on subdirectories too"
 	exit(0)
-	
+
+
 def organizeImages(dir):
 	rmdup.findDuplicates(dir)
 	rmdup.removeDuplicates()
@@ -25,13 +34,8 @@ def organizeImages(dir):
 	ordimg.sortImgToMap(dir)
 	ordimg.sortImgToDirs()
 
-if __name__ == "__main__":
-	if len(argv) == 1:
-		print "You must provide a path!"
-		print "use the -h switch for help."
-		
-	path = argv[1]
-	
+
+def init(path):
 	if not os.path.exists(path):
 		if argv[1] == '-h' or argv[1] == '-H' or argv[1] == '-help':
 			help()
@@ -46,5 +50,18 @@ if __name__ == "__main__":
 			ordimg.recursive = True
 		elif x in ('-h', '-H', '-help'):
 			help()
-			
+
+
+def main():
+	if len(argv) == 1:
+		print "You must provide a path!"
+		print "use the -h switch for help."
+		
+	path = argv[1]
+	init(path)
+				
 	organizeImages(path)
+
+
+if __name__ == "__main__":
+	main()

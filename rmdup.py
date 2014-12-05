@@ -1,15 +1,22 @@
 #!/usr/bin/env python
 
+"""Duplicate Remover
+
+Deletes all duplicate files!"""
+
+
 import os
 import hashlib
 from sys import exit, argv
 from collections import defaultdict
+
 
 fileSizes = defaultdict(list)
 printDeleted = False
 recursive = False
 imgOnly = False
 imgExt = ['.jpg', '.png', '.gif']
+
 
 def help():
 	print "Deletes all duplicate files!"
@@ -20,13 +27,15 @@ def help():
 	print "\t-w, -W: \tPrints the files which are being removed"
 	print "\t-f, -F: \tOnly deletes files which has image extensions"
 	exit(0)
-	
+
+
 def md5sum(filename, blocksize=65536):
     hash = hashlib.md5()
     with open(filename, "r+b") as f:
         for block in iter(lambda: f.read(blocksize), ""):
             hash.update(block)
     return hash.hexdigest()
+
 
 def findDuplicates(dir):
 	global fileSizes
@@ -42,7 +51,8 @@ def findDuplicates(dir):
 					continue
 	
 			fileSizes[os.stat(act).st_size].append(act)
-			
+
+
 def removeDuplicates():
 	for size, files in fileSizes.iteritems():
 		if len(files) > 1:
@@ -61,14 +71,12 @@ def removeDuplicates():
 						os.remove(f2)
 						if printDeleted:
 							print f2, "has been deleted!"
-					
-if __name__ == "__main__":
-	if len(argv) == 1:
-		print "You must provide the desired path!"
-		exit(-1)
-		
-	path = argv[1]
-		
+
+
+def init(path):
+	global recursive
+	global printDeleted
+	global imgOnly
 	if not os.path.exists(path):
 		if path == '-h' or path == '-help':
 			help()
@@ -90,7 +98,9 @@ if __name__ == "__main__":
 		else:
 			print "Unknonw switch, aborting script!"
 			exit(-1)
+
 		
+def run(path):
 	print "This will delete all duplicates from " + os.path.abspath(argv[1])
 	if recursive:
 		print "  and all it's subdirectories"
@@ -101,7 +111,21 @@ if __name__ == "__main__":
 			break
 		
 	if proceed in ('y', 'Y'):
-		findDuplicates(argv[1])
+		findDuplicates(path)
 		removeDuplicates()
 	else:
 		print "script aborted"
+
+
+def main():
+	if len(argv) == 1:
+		print "You must provide the desired path!"
+		exit(-1)
+
+	path = argv[1]
+	init(path)
+	run(path)
+
+
+if __name__ == "__main__":
+	main()
