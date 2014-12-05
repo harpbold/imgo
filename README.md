@@ -65,7 +65,7 @@ imgo.py [path to dir] [switches]
 Try it out
 ====
 
-I reccomend using [this](http://www.reddit.com/r/pcmasterrace/comments/21xa6w/a_torrent_version_of_the_over_52000_wallpapers/) massive image collection for testing purposes.
+I recommend using [this](http://www.reddit.com/r/pcmasterrace/comments/21xa6w/a_torrent_version_of_the_over_52000_wallpapers/) massive image collection for testing purposes.
 
 Contributors
 ====
