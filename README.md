@@ -62,10 +62,10 @@ Switches:
 Usage:
 imgo.py [path to dir] [switches]
 
-Source to try out
+Try it out
 ====
 
-The software has been tested with [this](http://www.reddit.com/r/pcmasterrace/comments/21xa6w/a_torrent_version_of_the_over_52000_wallpapers/) image collection.
+I reccomend using [this](http://www.reddit.com/r/pcmasterrace/comments/21xa6w/a_torrent_version_of_the_over_52000_wallpapers/) massive image collection for testing purposes.
 
 Contributors
 ====
