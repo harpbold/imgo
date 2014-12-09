@@ -5,6 +5,11 @@ Image Organizer (removes duplicates, fixes extensions and sorts to directories b
 
 This script has been seperated to 4 scripts for people who only needs one functionality. This software uses Pillow which is the fork of the Python Imaging Library (PIL).
 
+about
+====
+
+The purpose of this software is to help you organize your images.
+This script will remove any duplicate images from your image collection, rename any badly named file to it's correct extension and map images to folders by their dimension.
 
 rmdup.py
 ====
