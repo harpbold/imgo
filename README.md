@@ -11,6 +11,13 @@ about
 The purpose of this software is to help you organize your images.
 This script will remove any duplicate images from your image collection, rename any badly named file to it's correct extension and map images to folders by their dimension.
 
+
+gui_imgo.py
+====
+
+GUI for imgo, made with PyQt4.
+
+
 rmdup.py
 ====
 
